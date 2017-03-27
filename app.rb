@@ -1,15 +1,13 @@
 require 'sinatra'
 
-get '/' do
+get '/' do #localhost:4567/
   "Hello Connie"
 end
 
-get '/secret' do
+get '/secret' do #localhost:4567/secret
   "We love HTML!"
 end
 
-get '/cat' do
-  "<div>
-  <img src='http://bit.ly/1eze8aE' style='border: 3px dashed red' >
-  </div>"
+get '/cat' do #localhost:4567/cat
+  erb(:index)
 end
