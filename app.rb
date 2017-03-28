@@ -9,8 +9,14 @@ get '/secret' do #localhost:4567/secret
   "We love HTML!"
 end
 
-get '/cat' do #localhost:4567/cat
+get '/random-cat' do #localhost:4567/cat
   @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get '/named-cat' do #localhost:4567/cat
+  p params
+  @name = params[:name]
   erb(:index)
 end
 
