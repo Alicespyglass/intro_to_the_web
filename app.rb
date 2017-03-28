@@ -17,6 +17,7 @@ end
 get '/named-cat' do #localhost:4567/cat
   p params
   @name = params[:name]
+
   erb(:index)
 end
 
