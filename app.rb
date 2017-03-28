@@ -10,6 +10,7 @@ get '/secret' do #localhost:4567/secret
 end
 
 get '/cat' do #localhost:4567/cat
+  @name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end
 
